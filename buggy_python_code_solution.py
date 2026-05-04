@@ -12,7 +12,6 @@ def index():
     url = flask.request.args.get("url")
     return fetch_website(version, url)
 
-        
 CONFIG = {"API_KEY": "771df488714111d39138eb60df756e6b"}
 class Person(object):
     def __init__(self, name):
@@ -47,7 +46,7 @@ def authenticate(password):
 
 if __name__ == '__main__':
     print("Vulnerabilities:")
-    print("1. Format string vulnerability: use string={person.__init__.__globals__[CONFIG][API_KEY]}")
+    print("1.Format string vulnerability:use string={person.__init__.__globals__[CONFIG][API_KEY]}")
     print("2. Code injection vulnerability: use string=;print('Own code executed') #")
     print("3. Yaml deserialization vulnerability: see file_solution.yaml for a solution")
     print("4. Use of assert statements vulnerability: run program with -O argument")
@@ -64,4 +63,3 @@ if __name__ == '__main__':
     elif choice == "4":
         password = input("Enter master password: ")
         authenticate(password)
-
